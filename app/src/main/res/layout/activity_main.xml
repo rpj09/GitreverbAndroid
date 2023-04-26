@@ -15,4 +15,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="361dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="92dp"
+        android:backgroundTint="#150303"
+        android:ems="10"
+        android:hint="                           github email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>
