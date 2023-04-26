@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "453450721551",
+    "project_id": "gitreverb",
+    "storage_bucket": "gitreverb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453450721551:android:9df13a9a52df847354b67a",
+        "android_client_info": {
+          "package_name": "com.example.experimentalreverb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453450721551-0n9msh8b4e90cout639u0pnm36hqg5jl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDC0ZMeCHMuJlAipCBlDc-mfFm7FFvzXh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453450721551-0n9msh8b4e90cout639u0pnm36hqg5jl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
