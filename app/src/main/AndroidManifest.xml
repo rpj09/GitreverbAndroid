@@ -37,7 +37,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:replace="android:theme"
         android:configChanges="orientation|keyboardHidden|screenSize"
+
         android:permission="android.permission.INTERNET" />
+
     </application>
 
 </manifest>
