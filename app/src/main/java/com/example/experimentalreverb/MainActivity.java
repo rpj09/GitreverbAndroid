@@ -3,10 +3,10 @@ package com.example.experimentalreverb;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,25 +18,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.OAuthCredential;
 import com.google.firebase.auth.OAuthProvider;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
-    private static final String TAG = "MainActivity";
-    private static final String CLIENT_ID = "4d07a219647cab01ce5c";
-    private static final String APP_ID_SECRET = "370949a4ee53b9408e73670ce3c3f44e68fe531e";
-    private static final String REDIRECT_URI = "com.example.app.my-app-scheme://auth";
     private EditText gitEmail;
     private Button gitLogin;
     private FirebaseAuth fAuth;
-
-    private FirebaseAuth mAuth;
-    private TextView mUserNameTextView;
-    private TextView mUserBioTextView;
-    private TextView mUserRepoCountTextView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +49,150 @@ public class MainActivity extends AppCompatActivity {
                                             new ArrayList<String>(){
                                                 {
                                                     add("user:email");
+                                                }
+                                                {
+                                                    add("repo");
+                                                }
+                                                {
+                                                    add("read:org");
+                                                }
+                                                {
+                                                    add("read:public_key");
+                                                }
+                                                {
+                                                    add("read:gpg_key");
+                                                }
+                                                {
+                                                    add("admin:org_hook");
+                                                }
+                                                {
+                                                    add("admin:org");
+                                                }
+                                                {
+                                                    add("admin:public_key");
+                                                }
+                                                {
+                                                    add("admin:gpg_key");
+                                                }
+                                                {
+                                                    add("admin:enterprise");
+                                                }
+                                                {
+                                                    add("admin:org_hook");
+                                                }
+                                                {
+                                                    add("admin:org");
+                                                }
+                                                {
+                                                    add("admin:public_key");
+                                                }
+                                                {
+                                                    add("admin:gpg_key");
+                                                }
+                                                {
+                                                    add("admin:enterprise");
+                                                }
+                                                {
+                                                    add("admin:enterprise_hook");
+                                                }
+                                                {
+                                                    add("gist");
+                                                }
+                                                {
+                                                    add("notifications");
+                                                }
+                                                {
+                                                    add("user");
+                                                }
+                                                {
+                                                    add("delete_repo");
+                                                }
+                                                {
+                                                    add("write:discussion");
+                                                }
+                                                {
+                                                    add("read:packages");
+                                                }
+                                                {
+                                                    add("write:packages");
+                                                }
+                                                {
+                                                    add("delete:packages");
+                                                }
+                                                {
+                                                    add("admin:packages");
+                                                }
+                                                {
+                                                    add("read:org");
+                                                }
+                                                {
+                                                    add("write:org");
+                                                }
+                                                {
+                                                    add("admin:org");
+                                                }
+                                                {
+                                                    add("read:enterprise");
+                                                }
+                                                {
+                                                    add("write:enterprise");
+                                                }
+                                                {
+                                                    add("admin:enterprise");
+                                                }
+                                                {
+                                                    add("read:user");
+                                                }
+                                                {
+                                                    add("write:user");
+                                                }
+                                                {
+                                                    add("admin:gpg_key");
+                                                }
+                                                {
+                                                    add("read:gpg_key");
+                                                }
+                                                {
+                                                    add("write:gpg_key");
+                                                }
+                                                {
+                                                    add("admin:public_key");
+                                                }
+                                                {
+                                                    add("read:public_key");
+                                                }
+                                                {
+                                                    add("write:public_key");
+                                                }
+                                                {
+                                                    add("admin:repo_hook");
+                                                }
+                                                {
+                                                    add("read:repo_hook");
+                                                }
+                                                {
+                                                    add("write:repo_hook");
+                                                }
+                                                {
+                                                    add("admin:org_hook");
+                                                }
+                                                {
+                                                    add("read:org_hook");
+                                                }
+                                                {
+                                                    add("write:org_hook");
+                                                }
+                                                {
+                                                    add("admin:enterprise_hook");
+                                                }
+                                                {
+                                                    add("read:enterprise_hook");
+                                                }
+                                                {
+                                                    add("write:enterprise_hook");
+                                                }
+                                                {
+                                                    add("admin:discussion");
                                                 }
                                             })
                                     .build()
@@ -93,16 +227,16 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onSuccess(AuthResult authResult) {
                     FirebaseUser user = fAuth.getCurrentUser();
+                    FirebaseUser UserDetails = authResult.getUser();
                     Intent intent = new Intent(MainActivity.this, Profile.class);
+                    Log.d("User --", "onSuccess: " + user.getEmail() + " " + user.getDisplayName() + " " + user.getPhotoUrl() + " profile " + authResult.getAdditionalUserInfo().getProfile() + "  access token  ->> " +authResult.getCredential() + " user " + authResult.getUser() + " awe "+((OAuthCredential)authResult.getCredential()).getAccessToken());
+
                     intent.putExtra("email", user.getEmail());
                     intent.putExtra("name", user.getDisplayName());
                     intent.putExtra("photo", String.valueOf(user.getPhotoUrl()));
-                    intent.putExtra("acesstoken", String.valueOf(user.getIdToken(true)));
-                    intent.putExtra("bio", user.getProviderId());
-                    intent.putExtra("repoCount", user.getProviderId());
-                    intent.putExtra("username", user.getProviderId());
+                    intent.putExtra("AcessToken",((OAuthCredential)authResult.getCredential()).getAccessToken());
                     startActivity(intent);
-                    finish();
+                    //finish();
 
                 }
 
