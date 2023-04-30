@@ -24,8 +24,10 @@ public class GitHubApiClient {
     }
 
     public GitHubUser getUserDetails(String username, String accessToken) throws IOException {
-        String url = baseUrl + "/users/" + username;
-        Request request = createAuthorizedRequest(url, accessToken);
+        Request request = new Request.Builder()
+                .url(baseUrl + "/user")
+                .header("Authorization", "token " + accessToken)
+                .build();
         Response response = httpClient.newCall(request).execute();
         String responseBody = response.body().string();
         response.close();
@@ -33,8 +35,10 @@ public class GitHubApiClient {
     }
 
     public List<GitHubUser> getFollowers(String username, String accessToken) throws IOException {
-        String url = baseUrl + "/users/" + username + "/followers";
-        Request request = createAuthorizedRequest(url, accessToken);
+        Request request = new Request.Builder()
+                .url(baseUrl + "/user/followers")
+                .header("Authorization", "token " + accessToken)
+                .build();
         Response response = httpClient.newCall(request).execute();
         String responseBody = response.body().string();
         response.close();
@@ -42,8 +46,10 @@ public class GitHubApiClient {
     }
 
     public List<GitHubUser> getFollowing(String username, String accessToken) throws IOException {
-        String url = baseUrl + "/users/" + username + "/following";
-        Request request = createAuthorizedRequest(url, accessToken);
+        Request request = new Request.Builder()
+                .url(baseUrl + "/user/following")
+                .header("Authorization", "token " + accessToken)
+                .build();
         Response response = httpClient.newCall(request).execute();
         String responseBody = response.body().string();
         response.close();
@@ -70,9 +76,11 @@ public class GitHubApiClient {
 
 
 
-    public List<GitHubRepository> getRepositories(String username, String accessToken) throws IOException {
-        String url = baseUrl + "/users/" + username + "/repos";
-        Request request = createAuthorizedRequest(url, accessToken);
+    public List<GitHubRepository> getRepositories(String accessToken) throws IOException {
+        Request request = new Request.Builder()
+                .url(baseUrl + "/user/repos")
+                .header("Authorization", "token " + accessToken)
+                .build();
         Response response = httpClient.newCall(request).execute();
         String responseBody = response.body().string();
         response.close();

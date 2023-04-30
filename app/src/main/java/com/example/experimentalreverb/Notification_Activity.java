@@ -1,38 +1,26 @@
 package com.example.experimentalreverb;
 
-import static com.example.experimentalreverb.R.id.LoadEmail;
-
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
 import java.util.List;
 
-public class Profile extends AppCompatActivity {
+public class Notification_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
-
-        TextView tvLoadEmail = findViewById(LoadEmail);
-        Log.d("Profile", "onCreate: " +"On created started !!!");
-        String email = getIntent().getStringExtra("email");
-        String name = getIntent().getStringExtra("name");
-        String accessToken = getIntent().getStringExtra("AccessToken");
-        String photoUrl = getIntent().getStringExtra("photo");
-        Log.d("Profi", "onCreate: " + " " + email + " " + name + " " + accessToken + " " + photoUrl);
-
-        tvLoadEmail.setText(email);
-
-        new GetNotificationsTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, accessToken);
+        setContentView(R.layout.activity_notification);
+        String token = Accesstoken.getInstance().getToken();
+        new GetNotificationsTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, token);
     }
 
-    private static class GetNotificationsTask extends AsyncTask<String, Void, List<GitHubNotification>> {
+
+    static class GetNotificationsTask extends AsyncTask<String, Void, List<GitHubNotification>> {
 
         @Override
         protected List<GitHubNotification> doInBackground(String... strings) {

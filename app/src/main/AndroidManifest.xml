@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,7 +16,21 @@
         android:theme="@style/Theme.Experimentalreverb"
         tools:targetApi="31">
         <activity
-            android:name=".Profile"
+            android:name=".RepositoriesActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Notification_Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Profile_Activity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
@@ -33,15 +49,13 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-    <activity
-        android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-        android:exported="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar"
-        tools:replace="android:theme"
-        android:configChanges="orientation|keyboardHidden|screenSize"
-
-        android:permission="android.permission.INTERNET" />
-
+        <activity
+            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:permission="android.permission.INTERNET"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            tools:replace="android:theme" />
     </application>
 
 </manifest>

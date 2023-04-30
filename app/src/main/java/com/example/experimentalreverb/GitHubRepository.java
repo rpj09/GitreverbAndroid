@@ -1,30 +1,42 @@
 package com.example.experimentalreverb;
 
+import com.google.gson.annotations.SerializedName;
 
 public class GitHubRepository {
-    private int id;                 // The repository's ID
-    private String name;            // The repository's name
-    private String description;     // The repository's description
-    private String language;        // The repository's main programming language
-    private int stargazers_count;   // The number of stars the repository has received
-    private int forks_count;        // The number of forks the repository has received
-    private int watchers_count;     // The number of users watching the repository
-    private String created_at;      // The date and time the repository was created
-    private String updated_at;      // The date and time the repository was last updated
-    private String html_url;        // The URL of the repository's GitHub page
 
-    public int getId() {
-        return id;
-    }
+    private String name;
+    private String fullName;
+    private String description;
+    private String language;
+    private int forksCount;
+    private int watchersCount;
+    private int stargazersCount;
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    @SerializedName("html_url")
+    private String htmlUrl;
+
+    @SerializedName("default_branch")
+    private String defaultBranch;
+
+    @SerializedName("created_at")
+    private String createdAt;
+
+    @SerializedName("updated_at")
+    private String updatedAt;
+
+    @SerializedName("pushed_at")
+    private String pushedAt;
+
+    @SerializedName("owner")
+    private Owner owner;
 
     public String getName() {
         return name;
     }
 
+    public String getFullName() {
+        return fullName;
+    }
     public void setName(String name) {
         this.name = name;
     }
@@ -33,79 +45,104 @@ public class GitHubRepository {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public String getLanguage() {
         return language;
     }
-
     public void setLanguage(String language) {
         this.language = language;
     }
 
-    public int getStargazers_count() {
-        return stargazers_count;
+    public int getForksCount() {
+        return forksCount;
+    }
+    public void setForksCount(int forksCount) {
+        this.forksCount = forksCount;
     }
 
-    public void setStargazers_count(int stargazers_count) {
-        this.stargazers_count = stargazers_count;
+    public int getWatchersCount() {
+        return watchersCount;
+    }
+    public void setWatchersCount(int watchersCount) {
+        this.watchersCount = watchersCount;
+    }
+    public int getStargazersCount() {
+        return stargazersCount;
+    }
+    public void setStargazersCount(int stargazersCount) {
+        this.stargazersCount = stargazersCount;
     }
 
-    public int getForks_count() {
-        return forks_count;
+    public String getHtmlUrl() {
+        return htmlUrl;
+    }
+    public void setHtmlUrl(String htmlUrl) {
+        this.htmlUrl = htmlUrl;
     }
 
-    public void setForks_count(int forks_count) {
-        this.forks_count = forks_count;
+    public String getDefaultBranch() {
+        return defaultBranch;
+    }
+    public void setDefaultBranch(String defaultBranch) {
+        this.defaultBranch = defaultBranch;
     }
 
-    public int getWatchers_count() {
-        return watchers_count;
+    public String getCreatedAt() {
+        return createdAt;
+    }
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public void setWatchers_count(int watchers_count) {
-        this.watchers_count = watchers_count;
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
-    public String getCreated_at() {
-        return created_at;
+    public String getPushedAt() {
+        return pushedAt;
+    }
+    public void setPushedAt(String pushedAt) {
+        this.pushedAt = pushedAt;
     }
 
-    public void setCreated_at(String created_at) {
-        this.created_at = created_at;
+    public Owner getOwner() {
+        return owner;
+    }
+    public void setOwner(Owner owner) {
+        this.owner = owner;
+    }
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getUpdated_at() {
-        return updated_at;
-    }
+    public static class Owner {
+        private String login;
 
-    public void setUpdated_at(String updated_at) {
-        this.updated_at = updated_at;
-    }
+        @SerializedName("avatar_url")
+        private String avatarUrl;
 
-    public String getHtml_url() {
-        return html_url;
-    }
+        @SerializedName("html_url")
+        private String htmlUrl;
 
-    public void setHtml_url(String html_url) {
-        this.html_url = html_url;
-    }
-
-    @Override
-    public String toString() {
-        return "GitHubRepository{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", language='" + language + '\'' +
-                ", stargazers_count=" + stargazers_count +
-                ", forks_count=" + forks_count +
-                ", watchers_count=" + watchers_count +
-                ", created_at='" + created_at + '\'' +
-                ", updated_at='" + updated_at + '\'' +
-                ", html_url='" + html_url + '\'' +
-                '}';
+        public String getLogin() {
+            return login;
+        }
+        public void setLogin(String login) {
+            this.login = login;
+        }
+        public String getAvatarUrl() {
+            return avatarUrl;
+        }
+        public void setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
+        }
+        public String getHtmlUrl() {
+            return htmlUrl;
+        }
+        public void setHtmlUrl(String htmlUrl) {
+            this.htmlUrl = htmlUrl;
+        }
     }
 }

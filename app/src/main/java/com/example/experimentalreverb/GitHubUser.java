@@ -14,6 +14,9 @@ public class GitHubUser {
     private int following;          // The number of users this user is following
     private String created_at;      // The date and time the user's account was created
     private String updated_at;      // The date and time the user's account was last updated
+    private int public_repos;       // The number of public repositories owned by the user
+    private int public_gists;       // The number of public gists owned by the user
+
 
     public String getLogin() {
         return login;
@@ -118,6 +121,21 @@ public class GitHubUser {
     public void setUpdated_at(String updated_at) {
         this.updated_at = updated_at;
     }
+    public int getPublic_repos() {
+        return public_repos;
+    }
+
+    public void setPublic_repos(int public_repos) {
+        this.public_repos = public_repos;
+    }
+
+    public int getPublic_gists() {
+        return public_gists;
+    }
+
+    public void setPublic_gists(int public_gists) {
+        this.public_gists = public_gists;
+    }
 
     @Override
     public String toString() {
@@ -137,4 +155,5 @@ public class GitHubUser {
                 ", updated_at='" + updated_at + '\'' +
                 '}';
     }
+
 }
