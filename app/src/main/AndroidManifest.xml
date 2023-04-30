@@ -16,6 +16,20 @@
         android:theme="@style/Theme.Experimentalreverb"
         tools:targetApi="31">
         <activity
+            android:name=".FollowingActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".FollowersActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".RepositoriesActivity"
             android:exported="false">
             <meta-data

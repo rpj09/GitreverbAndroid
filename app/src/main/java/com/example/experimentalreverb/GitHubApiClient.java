@@ -34,7 +34,7 @@ public class GitHubApiClient {
         return gson.fromJson(responseBody, GitHubUser.class);
     }
 
-    public List<GitHubUser> getFollowers(String username, String accessToken) throws IOException {
+    public List<GitHubUser> getFollowers(String accessToken) throws IOException {
         Request request = new Request.Builder()
                 .url(baseUrl + "/user/followers")
                 .header("Authorization", "token " + accessToken)
@@ -45,7 +45,7 @@ public class GitHubApiClient {
         return Arrays.asList(gson.fromJson(responseBody, GitHubUser[].class));
     }
 
-    public List<GitHubUser> getFollowing(String username, String accessToken) throws IOException {
+    public List<GitHubUser> getFollowing(String accessToken) throws IOException {
         Request request = new Request.Builder()
                 .url(baseUrl + "/user/following")
                 .header("Authorization", "token " + accessToken)
