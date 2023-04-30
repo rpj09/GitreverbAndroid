@@ -1,31 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/rectangle_1"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/login_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="login with github"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:id="@+id/page_android_large___1_ek1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingRight="35dp">
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="361dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="92dp"
-        android:backgroundTint="#150303"
-        android:ems="10"
-        android:hint="                           github email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_button" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/rectangle_2"
+            android:layout_width="373dp"
+            android:layout_height="199dp"
+            android:layout_below="@+id/login"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="774dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="214dp"
+            android:alpha="0.6700000166893"
+            android:background="@drawable/rectangle_2_shape" />
+
+        <RelativeLayout
+            android:id="@+id/frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="448dp">
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/login_button"
+            android:layout_width="148dp"
+            android:layout_height="65dp"
+            android:layout_alignTop="@+id/rectangle_2"
+            android:layout_alignEnd="@+id/rectangle_2"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="118dp"
+            android:layout_marginEnd="117dp"
+            android:contentDescription="@string/rectangle_4"
+            android:src="@drawable/rectangle_4" />
+
+        <TextView
+            android:id="@+id/gitreverb"
+            android:layout_width="215dp"
+            android:layout_height="79dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_marginStart="97dp"
+            android:layout_marginTop="131dp"
+            android:layout_marginEnd="108dp"
+            android:gravity="center"
+            android:text="@string/gitreverb_string"
+            android:textColor="@color/email_address_color"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/develop___learn___recruit"
+            android:layout_width="182dp"
+            android:layout_height="29.5dp"
+            android:layout_below="@+id/gitreverb"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="-21dp"
+            android:gravity="center"
+            android:text="@string/develop___learn___recruit_string"
+            android:textColor="@color/email_address_color"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="111dp"
+            android:layout_height="66dp"
+            android:layout_below="@+id/develop___learn___recruit"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="147dp"
+            android:layout_marginEnd="164dp"
+            android:gravity="center"
+            android:text="@string/login_string"
+            android:textColor="@color/email_address_color"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/vector"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@+id/rectangle_2"
+            android:layout_alignEnd="@+id/rectangle_2"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="320dp"
+            android:contentDescription="@string/vector"
+            android:src="@drawable/vector" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/rectangle_2"
+            android:layout_alignTop="@+id/rectangle_2"
+            android:layout_alignEnd="@+id/rectangle_2"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="9dp"
+            android:hint="Email" />
+
+    </RelativeLayout>
+</HorizontalScrollView>

@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,7 +26,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private EditText gitEmail;
-    private Button gitLogin;
+    private ImageView gitLogin;
     private FirebaseAuth fAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

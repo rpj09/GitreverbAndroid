@@ -1,3 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">experimentalreverb</string>
+	<!-- android_large___1 strings -->
+
+	<string name="app_name">Page 1</string>
+	<string name="ek_img_content">ExportKit Image</string>
+	<string name="email_address_string">Email Address</string>
+	<string name="login_with_github_string">Login With GitHub</string>
+	<string name="gitreverb_string">GITREVERB</string>
+	<string name="develop___learn___recruit_string">DEVELOP . LEARN . RECRUIT</string>
+	<string name="login_string">LOGIN</string>
+    <string name="rectangle_1">rectangle_1</string>
+	<string name="vector">vector</string>
+	<string name="rectangle_3">rectangle_3</string>
+	<string name="rectangle_4">rectangle_4</string>
 </resources>
