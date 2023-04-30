@@ -38,6 +38,7 @@ public class Profile extends AppCompatActivity {
         protected List<GitHubNotification> doInBackground(String... strings) {
             GitHubApiClient client = new GitHubApiClient(strings[0]);
             try {
+                Log.d("P", "doInBackground: " + " " + "Getting notifications");
                 return client.getNotifications();
             } catch (IOException e) {
                 Log.d("P", "onCreate: " + " " + "Error in getting notifications" + " " + e.getMessage());
@@ -50,9 +51,13 @@ public class Profile extends AppCompatActivity {
         protected void onPostExecute(List<GitHubNotification> notifications) {
             if (notifications != null) {
                 for (GitHubNotification notification : notifications) {
-                    Log.d("Pr", "onPostExecute: " + " " + notification);
+                    Log.d("Profile", "Subject: " + notification.getSubject().getTitle());
+                    Log.d("Profile", "Updated at: " + notification.getUpdated_at());
+                    Log.d("Profile", "Reason: " + notification.getReason());
+                    Log.d("Profile", "Read at: " + notification.getLast_read_at());
                 }
             }
         }
+
     }
 }

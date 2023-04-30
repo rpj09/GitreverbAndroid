@@ -5,9 +5,8 @@ public class GitHubNotification {
     private boolean unread;         // Whether or not the notification has been read
     private String reason;          // The reason for the notification
     private String updated_at;      // The date and time the notification was last updated
-    private String title;           // The title of the notification
-    private String url;             // The URL of the notification
-    private String latest_comment_url; // The URL of the latest comment on the notification
+    private String last_read_at;    // The date and time the notification was last read
+    private GitHubSubject subject;  // The subject of the notification
     private String type;            // The type of the notification (issue, pull request, etc.)
 
     public String getId() {
@@ -41,6 +40,51 @@ public class GitHubNotification {
     public void setUpdated_at(String updated_at) {
         this.updated_at = updated_at;
     }
+
+    public String getLast_read_at() {
+        return last_read_at;
+    }
+
+    public void setLast_read_at(String last_read_at) {
+        this.last_read_at = last_read_at;
+    }
+
+    public GitHubSubject getSubject() {
+        return subject;
+    }
+
+    public void setSubject(GitHubSubject subject) {
+        this.subject = subject;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "GitHubNotification{" +
+                "id='" + id + '\'' +
+                ", unread=" + unread +
+                ", reason='" + reason + '\'' +
+                ", updated_at='" + updated_at + '\'' +
+                ", last_read_at='" + last_read_at + '\'' +
+                ", subject=" + subject +
+                ", type='" + type + '\'' +
+                '}';
+    }
+}
+
+
+class GitHubSubject {
+    private String title;           // The title of the notification
+    private String url;             // The URL of the notification
+    private String latest_comment_url; // The URL of the latest comment on the notification
+    private String type;            // The type of the notification (issue, pull request, etc.)
 
     public String getTitle() {
         return title;
@@ -76,12 +120,8 @@ public class GitHubNotification {
 
     @Override
     public String toString() {
-        return "GitHubNotification{" +
-                "id='" + id + '\'' +
-                ", unread=" + unread +
-                ", reason='" + reason + '\'' +
-                ", updated_at='" + updated_at + '\'' +
-                ", title='" + title + '\'' +
+        return "GitHubSubject{" +
+                "title='" + title + '\'' +
                 ", url='" + url + '\'' +
                 ", latest_comment_url='" + latest_comment_url + '\'' +
                 ", type='" + type + '\'' +

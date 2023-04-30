@@ -229,12 +229,12 @@ public class MainActivity extends AppCompatActivity {
                     FirebaseUser user = fAuth.getCurrentUser();
                     FirebaseUser UserDetails = authResult.getUser();
                     Intent intent = new Intent(MainActivity.this, Profile.class);
-                    Log.d("User --", "onSuccess: " + user.getEmail() + " " + user.getDisplayName() + " " + user.getPhotoUrl() + " profile " + authResult.getAdditionalUserInfo().getProfile() + "  access token  ->> " +authResult.getCredential() + " user " + authResult.getUser() + " awe "+((OAuthCredential)authResult.getCredential()).getAccessToken());
+                    Log.d("User --", "onSuccess: " + user.getEmail() + " " + user.getDisplayName() + " " + user.getPhotoUrl() + " profile " + authResult.getAdditionalUserInfo().getProfile() + "  access token  ->> " +((OAuthCredential)authResult.getCredential()).getAccessToken() + " user " + authResult.getUser() + " awe "+((OAuthCredential)authResult.getCredential()).getAccessToken());
 
                     intent.putExtra("email", user.getEmail());
                     intent.putExtra("name", user.getDisplayName());
                     intent.putExtra("photo", String.valueOf(user.getPhotoUrl()));
-                    intent.putExtra("AcessToken",((OAuthCredential)authResult.getCredential()).getAccessToken());
+                    intent.putExtra("AccessToken",((OAuthCredential)authResult.getCredential()).getAccessToken());
                     startActivity(intent);
                     //finish();
 

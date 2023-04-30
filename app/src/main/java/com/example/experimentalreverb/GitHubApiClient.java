@@ -3,7 +3,6 @@ package com.example.experimentalreverb;
 import com.google.gson.Gson;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -50,8 +49,7 @@ public class GitHubApiClient {
         response.close();
         return Arrays.asList(gson.fromJson(responseBody, GitHubUser[].class));
     }
-
-    public List<GitHubNotification> getNotifications() throws IOException {
+    public GitHubNotificationArray getNotifications() throws IOException {
         Request request = new Request.Builder()
                 .url(baseUrl + "/notifications")
                 .header("Authorization", "token " + accessToken)
@@ -62,12 +60,13 @@ public class GitHubApiClient {
 
         if (responseBody.startsWith("{")) {
             // Response is an object, not an array
-            return new ArrayList<GitHubNotification>();
+            return new GitHubNotificationArray();
         } else {
             // Response is an array
-            return Arrays.asList(gson.fromJson(responseBody, GitHubNotification[].class));
+            return gson.fromJson(responseBody, GitHubNotificationArray.class);
         }
     }
+
 
 
 
