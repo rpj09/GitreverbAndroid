@@ -1,48 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/rectangle_1"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".Profile_Activity">
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/GITREVERB"
+            android:textSize="17dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/LoadUsername"
+            android:text="Username"
+            android:layout_marginTop="400px"
+            android:layout_marginLeft="170px"
+            android:textSize="20dp"
+            android:textStyle="bold">
+        </TextView>
+        <TextView
+            android:id="@+id/developer"
+            android:layout_width="70dp"
+            android:layout_height="18dp"
+            android:text="@string/developer"
+            android:layout_marginTop="500px"
+            android:layout_marginLeft="179px"
+            />
+        <TextView
+            android:id="@+id/followers"
+            android:layout_width="100dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="500px"
+            android:layout_marginLeft="410px"
+            />
+        <TextView
+            android:id="@+id/following"
+            android:layout_width="100dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="500px"
+            android:layout_marginLeft="710px"
+            />
+        <TextView
+            android:id="@+id/LoadEmail"
+            android:layout_width="300dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="35px"
+            android:layout_marginLeft="350px"
+            android:textSize="13dp"
+            />
 
-    <TextView
-        android:id="@+id/LoadEmail"
-        android:layout_width="231dp"
-        android:layout_height="51dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
 
-    <TextView
-        android:id="@+id/LoadUsername"
-        android:layout_width="233dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="52dp"
-        android:hint="username"
-        app:layout_constraintEnd_toEndOf="@+id/LoadEmail"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoadEmail" />
 
-    <TextView
-        android:id="@+id/followers"
-        android:layout_width="225dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoadUsername" />
 
-    <TextView
-        android:id="@+id/following"
-        android:layout_width="223dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/followers" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+    </ScrollView>

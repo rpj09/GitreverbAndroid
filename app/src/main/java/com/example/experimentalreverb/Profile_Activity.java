@@ -33,6 +33,7 @@ public class Profile_Activity extends AppCompatActivity {
 
         tvLoadEmail.setText(email);
 
+
         new GetUserDetailsTask(tvLoadName,tvLoadfollowers,tvLoadfollowing).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, accessToken);
     }
 
@@ -61,8 +62,8 @@ public class Profile_Activity extends AppCompatActivity {
         protected void onPostExecute(GitHubUser user) {
             if (user != null) {
                 tvLoadName.setText(String.valueOf(user.getLogin()));
-                tvLoadfollowers.setText(String.valueOf(user.getFollowers()));
-                tvLoadfollowing.setText(String.valueOf(user.getFollowing()));
+                tvLoadfollowers.setText(user.getFollowers()+" Followers ");
+                tvLoadfollowing.setText(user.getFollowing()+" Following ");
                 Log.d("Profile_Activity", "User Details:");
                 Log.d("Profile_Activity", "Username: " + user.getLogin());
                 Log.d("Profile_Activity", "Name: " + user.getName());

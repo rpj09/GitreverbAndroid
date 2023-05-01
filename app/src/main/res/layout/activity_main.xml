@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,113 +10,111 @@
     tools:context=".MainActivity">
 
 
-    <ScrollView
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <RelativeLayout
-            android:id="@+id/relativeLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <View
+            android:id="@+id/rectangle_2"
+            android:layout_width="353dp"
+            android:layout_height="206dp"
+            android:layout_below="@+id/login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:alpha="0.6700000166893"
+            android:background="@drawable/rectangle_2_shape" />
 
-            <View
-                android:id="@+id/rectangle_2"
-                android:layout_width="353dp"
-                android:layout_height="206dp"
-                android:layout_below="@+id/login"
-                android:layout_marginTop="2dp"
-                android:layout_centerHorizontal="true"
-                android:alpha="0.6700000166893"
-                android:background="@drawable/rectangle_2_shape" />
+        <ImageView
+            android:id="@+id/login_button"
+            android:layout_width="148dp"
+            android:layout_height="65dp"
+            android:layout_alignStart="@+id/rectangle_2"
+            android:layout_alignTop="@+id/rectangle_2"
+            android:layout_alignEnd="@+id/rectangle_2"
+            android:layout_alignBottom="@+id/rectangle_2"
+            android:layout_marginTop="118dp"
+            android:layout_marginBottom="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal|center"
+            android:contentDescription="@string/rectangle_4"
+            android:src="@drawable/rectangle_4" />
 
-            <ImageView
-                android:id="@+id/login_button"
-                android:layout_width="148dp"
-                android:layout_height="65dp"
-                android:layout_alignStart="@+id/rectangle_2"
-                android:layout_alignTop="@+id/rectangle_2"
-                android:layout_alignEnd="@+id/rectangle_2"
-                android:layout_alignBottom="@+id/rectangle_2"
-                android:layout_marginTop="118dp"
-                android:layout_marginBottom="16dp"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center_horizontal|center"
-                android:contentDescription="@string/rectangle_4"
-                android:src="@drawable/rectangle_4" />
+        <TextView
+            android:id="@+id/gitreverb"
+            android:layout_width="215dp"
+            android:layout_height="79dp"
+            android:layout_alignStart="@+id/rectangle_2"
+            android:layout_alignEnd="@+id/login_button"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="135dp"
+            android:layout_marginEnd="68dp"
+            android:gravity="center"
+            android:text="@string/gitreverb_string"
+            android:textColor="@color/email_address_color"
+            android:textSize="36sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/gitreverb"
-                android:layout_width="215dp"
-                android:layout_height="79dp"
-                android:layout_alignParentTop="true"
+        <TextView
+            android:id="@+id/develop___learn___recruit"
+            android:layout_width="189dp"
+            android:layout_height="44dp"
+            android:layout_below="@+id/gitreverb"
+            android:layout_alignEnd="@+id/gitreverb"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_marginTop="-31dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="@string/develop___learn___recruit_string"
+            android:textColor="@color/email_address_color"
+            android:textSize="13sp"
+            android:textStyle="bold" />
 
-                android:layout_gravity="center_horizontal|center"
-                android:layout_marginStart="90dp"
-                android:layout_marginTop="69dp"
-                android:gravity="center"
-                android:text="@string/gitreverb_string"
-                android:textColor="@color/email_address_color"
-                android:textSize="36sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="119dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/develop___learn___recruit"
+            android:layout_alignStart="@+id/gitreverb"
+            android:layout_alignEnd="@+id/gitreverb"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="151dp"
+            android:layout_marginEnd="38dp"
+            android:text="@string/login_string"
+            android:textColor="@color/email_address_color"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/develop___learn___recruit"
-                android:layout_width="182dp"
-                android:layout_height="29.5dp"
-                android:layout_below="@+id/gitreverb"
-                android:layout_alignEnd="@+id/gitreverb"
-                android:layout_gravity="center_horizontal|center"
-                android:layout_marginTop="-16dp"
-                android:layout_marginEnd="19dp"
-                android:gravity="center"
-                android:text="@string/develop___learn___recruit_string"
-                android:textColor="@color/email_address_color"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/vector"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignStart="@+id/rectangle_2"
+            android:layout_alignTop="@+id/rectangle_2"
+            android:layout_alignEnd="@+id/rectangle_2"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="262dp"
+            android:contentDescription="@string/vector"
+            android:src="@drawable/vector" />
 
-            <TextView
-                android:id="@+id/login"
-                android:layout_width="94dp"
-                android:layout_height="46dp"
-                android:layout_below="@+id/develop___learn___recruit"
-                android:layout_alignStart="@+id/gitreverb"
-                android:layout_alignEnd="@+id/gitreverb"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center_horizontal|center"
-                android:layout_marginStart="62dp"
-                android:layout_marginTop="138dp"
-                android:layout_marginEnd="59dp"
-                android:text="@string/login_string"
-                android:textColor="@color/email_address_color"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/rectangle_2"
+            android:layout_alignTop="@+id/rectangle_2"
+            android:layout_alignEnd="@+id/rectangle_2"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Email" />
 
-            <ImageView
-                android:id="@+id/vector"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_alignStart="@+id/rectangle_2"
-                android:layout_alignTop="@+id/rectangle_2"
-                android:layout_alignEnd="@+id/rectangle_2"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="49dp"
-                android:layout_marginEnd="262dp"
-                android:contentDescription="@string/vector"
-                android:src="@drawable/vector" />
+    </RelativeLayout>
+</ScrollView>
 
-            <EditText
-                android:id="@+id/email"
-                android:layout_width="294dp"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/rectangle_2"
-                android:layout_alignTop="@+id/rectangle_2"
-                android:layout_alignEnd="@+id/rectangle_2"
-                android:layout_marginStart="84dp"
-                android:layout_marginTop="44dp"
-                android:layout_marginEnd="10dp"
-                android:hint="Email" />
-
-        </RelativeLayout>
-    </ScrollView>
-</LinearLayout>
