@@ -15,4 +15,5 @@
 	<string name="rectangle_4">rectangle_4</string>
     <string name="GITREVERB">GIT REVERB</string>
     <string name="developer">Developer\n</string>
+    <string name="notifications_string">Notifications</string>
 </resources>

@@ -17,4 +17,7 @@
 	<color name="rectangle_2_color">#1D2432</color>
 	<color name="email_address_color">#FFFFFF</color>
 	<color name="line_2_color">#000000</color>
+	<color name="_bg__frame_1_ek2_color">#000000</color>
+	<color name="notifications_color">#FFFFFF</color>
+	<color name="notification1_color">#313445</color>
 </resources>

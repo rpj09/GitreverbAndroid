@@ -1,9 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Notification_Activity">
+    android:background="@drawable/rectangle_1"
+    android:gravity="center"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/notificationlabel"
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/nnotificationlabel" />
+
+        <View
+            android:id="@+id/line_1"
+            android:background="@drawable/line_1_shape"
+            android:layout_below="@id/notificationlabel"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/line_1"
+            android:layout_marginTop="7dp">
+
+            <ImageView
+                android:id="@+id/notification1"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/notification_base" />
+
+            <TextView
+                android:id="@+id/notification1_subject"
+                android:layout_width="261dp"
+                android:layout_height="33dp"
+                android:layout_alignStart="@id/notification1"
+                android:layout_alignTop="@id/notification1"
+                android:layout_marginStart="94dp"
+                android:layout_marginTop="15dp"
+                android:text="---"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/notification1_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification1_subject"
+                android:layout_alignStart="@id/notification1_subject"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="6dp"
+                android:text="---"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/notification1_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification1_subject"
+                android:layout_alignStart="@id/notification1_subject"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="6dp"
+                android:text="---"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/notification2"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="120dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/notification_base" />
+            <TextView
+                android:id="@+id/notification2_subject"
+                android:layout_width="261dp"
+                android:layout_height="33dp"
+                android:layout_alignStart="@id/notification2"
+                android:layout_alignTop="@id/notification2"
+                android:layout_marginStart="94dp"
+                android:layout_marginTop="15dp"
+                android:text="---"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/notification2_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification2_subject"
+                android:layout_alignStart="@id/notification2_subject"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="6dp"
+                android:text="---"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/notification2_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification2_subject"
+                android:layout_alignStart="@id/notification2_subject"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="6dp"
+                android:text="---"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/notification3"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="220dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/notification_base" />
+            <TextView
+                android:id="@+id/notification3_subject"
+                android:layout_width="261dp"
+                android:layout_height="33dp"
+                android:layout_alignStart="@id/notification3"
+                android:layout_alignTop="@id/notification3"
+                android:layout_marginStart="94dp"
+                android:layout_marginTop="15dp"
+                android:text="---"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/notification3_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification3_subject"
+                android:layout_alignStart="@id/notification3_subject"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="6dp"
+                android:text="---"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/notification3_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification3_subject"
+                android:layout_alignStart="@id/notification3_subject"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="6dp"
+                android:text="---"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/notification4"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="320dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/notification_base" />
+            <TextView
+                android:id="@+id/notification4_subject"
+                android:layout_width="261dp"
+                android:layout_height="33dp"
+                android:layout_alignStart="@id/notification4"
+                android:layout_alignTop="@id/notification4"
+                android:layout_marginStart="94dp"
+                android:layout_marginTop="15dp"
+                android:text="---"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/notification4_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification4_subject"
+                android:layout_alignStart="@id/notification4_subject"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="6dp"
+                android:text="---"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/notification4_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification4_subject"
+                android:layout_alignStart="@id/notification4_subject"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="6dp"
+                android:text="---"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/notification5"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="420dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/notification_base" />
+
+            <TextView
+                android:id="@+id/notification5_subject"
+                android:layout_width="261dp"
+                android:layout_height="33dp"
+                android:layout_alignStart="@id/notification5"
+                android:layout_alignTop="@id/notification5"
+                android:layout_marginStart="94dp"
+                android:layout_marginTop="15dp"
+                android:text="---"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/notification5_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification5_subject"
+                android:layout_alignStart="@id/notification5_subject"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="6dp"
+                android:text="---"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/notification5_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification5_subject"
+                android:layout_alignStart="@id/notification5_subject"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="6dp"
+                android:text="---"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
